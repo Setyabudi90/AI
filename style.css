@@ -7,7 +7,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #343541;
+    background: linear-gradient(to top, #232b7e, #36118a);
 }
 
 .header{
@@ -16,11 +16,11 @@ body{
     justify-content: center;
     position: fixed;
     z-index: 989;
-    width: 100dvw;
-    background-color: #343541;
+    width: 100vw;
+    background-color: #381e7e;
     color: #ccc;
     border-bottom: 1px solid #5c5c66;
-    height: 45px;
+    height: 65px;
 }
 
 .header h3{
@@ -38,17 +38,17 @@ body{
 }
 
 .input-container{
-    background-color: #343541;
+    background-color: #36118a;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #5c5c66;
+    border-top: 1px solid #565697;
     position: sticky;
     bottom: 0;
 }
 
 #user-input{
-    background-color: #40414f;
+    background-color: #03095c;
     color: #fff;
     border: none;
     outline: none;
@@ -71,7 +71,7 @@ body{
     padding: 8px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4caf50;
+    background-color: #203864;
     color: #fff;
     cursor: pointer;
     margin-left: 15px;
@@ -79,7 +79,7 @@ body{
 }
 
 #send-button:hover{
-    background-color: #388e3c;
+    background-color: #060c42;
 }
 
 .chat-container{
@@ -95,9 +95,11 @@ body{
 #chat-log{
     margin-bottom: 10px;
     font-size: 14px;
-    margin-top: 1.9rem;
+    margin-top: 4rem;
     color: #fff;
-    background-color: #5c5c66;
+    backdrop-filter: blur(10px);
+    background-color: #383d75;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     line-height: 1.6;
     border-radius: 2px;
     max-width: 100%;
