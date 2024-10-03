@@ -104,7 +104,7 @@ const model = genAI.getGenerativeModel({
 let chat = model.startChat({
   history: [],
   generationConfig: {
-    maxOutputTokens: 150
+    maxOutputTokens: 250
   }
 });
 
@@ -122,7 +122,7 @@ userInput.addEventListener('keydown', (event) => {
 });
 
 async function sendMessage(){
-  const message = userInput.value.trim();
+  const message = userInput.value;
 
   if (message === '') {
     return;
