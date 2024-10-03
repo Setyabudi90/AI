@@ -92,7 +92,7 @@ let API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-pro", 
+  model: "gemini-1.5-flash", 
   safetySettings: [
     {
       category: HarmCategory.HARM_CATEGORY_HARASSMENT,
@@ -104,7 +104,7 @@ const model = genAI.getGenerativeModel({
 let chat = model.startChat({
   history: [],
   generationConfig: {
-    maxOutputTokens: 250
+    maxOutputTokens: 150
   }
 });
 
@@ -122,13 +122,13 @@ userInput.addEventListener('keydown', (event) => {
 });
 
 async function sendMessage(){
-  const message = userInput.value;
+  const message = userInput.value.trim();
 
   if (message === '') {
     return;
   }
 
-  chatLog.innerHTML = "Meresponse..."
+  chatLog.innerHTML = "<p>Meresponse...</p>"
 
   try {    
         const result = await chat.sendMessageStream(message);
@@ -150,7 +150,7 @@ async function sendMessage(){
         buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
         buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
       } catch (e) {
-        output.innerHTML += '<hr>Error: ' + e;
+        chatLog.innerHTML += '<hr>Error: ' + e;
       }
 }
 
