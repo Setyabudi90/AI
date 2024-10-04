@@ -7,7 +7,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, #232b7e, #36118a);
+    background: linear-gradient(to top, #1f143f,#123456);
 }
 
 .header{
@@ -17,7 +17,7 @@ body{
     position: fixed;
     z-index: 989;
     width: 100vw;
-    background-color: #381e7e;
+    background-color: #1f143f;
     color: #ccc;
     border-bottom: 1px solid #5c5c66;
     height: 65px;
@@ -38,7 +38,7 @@ body{
 }
 
 .input-container{
-    background-color: #36118a;
+    background-color: #24222b;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@ body{
 }
 
 #user-input{
-    background-color: #03095c;
+    background-color: #151625;
     color: #fff;
     border: none;
     outline: none;
