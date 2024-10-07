@@ -103,9 +103,6 @@ const model = genAI.getGenerativeModel({
 
 let chat = model.startChat({
   history: [],
-  generationConfig: {
-    maxOutputTokens: 250
-  }
 });
 
 const chatLog = document.getElementById('chat-log');
